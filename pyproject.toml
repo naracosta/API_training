@@ -6,6 +6,8 @@ authors = ["Nara Costa  <naracostaaaa@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.27.1"
+httpx = "0.18.2"
 
 [tool.poetry.dev-dependencies]
 
