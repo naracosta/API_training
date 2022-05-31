@@ -2,9 +2,7 @@ import asyncio
 import httpx
 import time
 
-start_time = time.time()
 lista = []
-lista2 = {}
 async def main():
 
     async with httpx.AsyncClient() as client:

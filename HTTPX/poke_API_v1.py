@@ -3,7 +3,6 @@ from API_training.HTTPX.types_pydanic import User
 import httpx
 import time
 
-start_time = time.time()
 lista = []
 for number in range(1, 3):
     pokemon_url = f'https://pokeapi.co/api/v2/pokemon/{number}' #vai sempre mudar o valor do numero até o 151
@@ -17,7 +16,7 @@ for number in range(1, 3):
 
 print(lista)
 
-# 12-16 list comprehension
+#list comprehension transforma linha 12-16 em 1 linha
 
 
 
