@@ -5,7 +5,7 @@ import httpx
 import time
 
 lista = []
-for number in range(1, 11):
+for number in range(1, 3):
     pokemon_url = f'https://pokeapi.co/api/v2/pokemon/{number}' #vai sempre mudar o valor do numero até o 151
     resp = httpx.get(pokemon_url)
     pokemon = resp.json()
