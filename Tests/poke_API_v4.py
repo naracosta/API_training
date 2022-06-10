@@ -15,7 +15,6 @@ async def main():
         for number in range(1, 20):
             url = f'https://pokeapi.co/api/v2/pokemon/{number}'
             novo_poke = asyncio.ensure_future(get_pokemon(client, url))
-            # poke_orm = [PokeORM(order=p.order,name=p.name,height=p.height, weight=p.weight) for p in novo_poke]
             lista.append(novo_poke)
             
         return await asyncio.gather(*lista)

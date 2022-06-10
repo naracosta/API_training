@@ -17,8 +17,6 @@ for number in range(1, 3):
 
 print(lista)
 
-#list comprehension transforma linha 12-16 em 1 linha
-
 
 
 

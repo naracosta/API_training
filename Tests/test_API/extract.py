@@ -12,10 +12,7 @@ async def main():
 
             resp = await client.get(pokemon_url)
             pokemon = resp.json()
-            #print([pokemon['order'], pokemon['name'], pokemon['height'], pokemon['weight']])
             lista.append([pokemon['order'], pokemon['name'], pokemon['height'], pokemon['weight']])
-            # lista2.append('order': pokemon['order'])
-            #print(pokemon['order'])
 
 asyncio.run(main())
 print(lista)

@@ -5,8 +5,6 @@ from API_training.poke_API.types_pydantic import User, PokeORM
 async def get_pokemon(client, url):
         resp = await client.get(url) #AWAIT --> fazer todos os get e depois continuar
         pokemon = resp.json()
-        # pokes_orm = PokeORM(**{p:pokemon[p] for p in ["order", "name", "height", "weight"]})
-        # pokes = User.from_orm(pokes_orm)
         pokes_pydantic = User(**{p:pokemon[p] for p in ["order", "name", "height", "weight"]})
         pokes = PokeORM(**dict(pokes_pydantic))
         return pokes
@@ -22,9 +20,7 @@ async def main():
 
         return await asyncio.gather(*lista)
 
-# print(asyncio.run(main()))
+asyncio.run(main())
 lst = list(asyncio.run(main()))
 # print(lst)
-# run = asyncio.run(main())
-# print(run)
 
